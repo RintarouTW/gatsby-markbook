@@ -1,10 +1,10 @@
 import Typography from 'typography'
-import funstonTheme from 'typography-theme-kirkham'
+import theme from 'typography-theme-kirkham'
 
-funstonTheme.baseFontSize = '18px'
-funstonTheme.headerFontFamily = ['Playfair Display']
-funstonTheme.bodyFontFamily = ['Fira Sans', 'serif']
-funstonTheme.overrideThemeStyles = ({ rhythm }, options) => ({
+theme.baseFontSize = '18px'
+theme.headerFontFamily = ['Playfair Display']
+theme.bodyFontFamily = ['Fira Sans', 'serif']
+theme.overrideThemeStyles = ({ rhythm }, options) => ({
     'h1': {
        fontSize: "x-large"
     },
@@ -14,9 +14,9 @@ funstonTheme.overrideThemeStyles = ({ rhythm }, options) => ({
     'h3': {
       fontSize: "medium"
     }
-  })
+})
 
-const typography = new Typography(funstonTheme)
+const typography = new Typography(theme)
 
 export const { scale, rhythm, options } = typography
 export default typography

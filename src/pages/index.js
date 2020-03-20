@@ -9,7 +9,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>        
-        {data.allMarkdownRemark.edges.map(({ node }) => (
+        {data.allMarkdownRemark.edges.reverse().map(({ node }) => (
           <div key={node.id}>
             <h3
               css={css`

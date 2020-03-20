@@ -25,6 +25,8 @@ import PropTypes from "prop-types"
 // <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js"></script>
 // `
 
+//<mathloader dangerouslySetInnerHTML={{ __html: MathLoader }} />
+
 const MathLoader = (
   <>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossOrigin="anonymous"/>
@@ -32,7 +34,7 @@ const MathLoader = (
   <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossOrigin="anonymous"/>
   </>
 );
-//<mathloader dangerouslySetInnerHTML={{ __html: MathLoader }} />
+
 export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
@@ -43,17 +45,17 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        {props.headComponents}        
+        {MathLoader}
+        {props.headComponents}
       </head>
       <body {...props.bodyAttributes} >
-        {props.preBodyComponents}        
+        {props.preBodyComponents}
         <div
           key={`body`}
           id="___gatsby"
           dangerouslySetInnerHTML={{ __html: props.body }}          
         />
         {props.postBodyComponents}
-        {MathLoader}
       </body>
     </html>
   )

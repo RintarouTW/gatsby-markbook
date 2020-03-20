@@ -6,10 +6,11 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 
 export default ({ data }) => {
+  const reversed = Array.from(data.allMarkdownRemark.edges).reverse();
   return (
     <Layout>
       <div>        
-        {data.allMarkdownRemark.edges.reverse().map(({ node }) => (
+        {reversed.map(({ node }) => (
           <div key={node.id}>
             <h3
               css={css`

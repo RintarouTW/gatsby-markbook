@@ -1,0 +1,45 @@
+/* css */
+p {
+  white-space: pre-wrap;
+  font-family: 'Fira Sans', 'serif';
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Playfair Display', 'serif';
+  font-weight: 400;
+}
+
+li {
+  font-family: serif;
+  font-weight: 400;
+  font-size: 100%;
+}
+
+b, strong {
+  font-family: "sans serif";
+  font-weight: 700;
+  font-size: 100%;
+  padding:0px 10px 0px 10px;
+  color: #222222;
+  background-color: #eeeeee;
+}
+
+h6.code {
+  color: #222222;
+  background-color: #eeeeee;
+} 
+
+pre, blockquote {
+  font-weight: 300;
+  background-color: #444444;
+  color: #cccccc;
+  padding: 10px;
+}
+
+pre {
+  border-radius: 10px;
+}
+
+.katex { 
+  font-size: 1em;
+}

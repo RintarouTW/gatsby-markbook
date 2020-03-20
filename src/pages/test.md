@@ -1,6 +1,12 @@
 # Test Markdown Page
 
-## Code Highlight
+* Code Highlight
+* Graphviz
+* LaTeX
+* Themes with [Typographic.js](https://kyleamathews.github.io/typography.js/)
+* iframe embedding test
+
+## Code Highlight (gatsby-remark-vscode)
 
 ```javascript
 <html>
@@ -33,7 +39,7 @@ latex2svg({ "latex" : '\$\$\\LaTeX \\frac{1}{3}\$\$'});
 </html>
 ```
 
-## Graphviz
+## Graphviz (gatsby-remark-graphviz)
 
 <center><b>Browser Internals</b></center>
 
@@ -154,3 +160,18 @@ $$
 &= \underbrace{(I + (1-\cos\theta)K^2 + \sin\theta K)}_\text{R := Rotation Matrix}\ \vv
 \end{aligned}
 $$
+
+## iframe embeded
+
+GeoGeBra
+
+<iframe scrolling="no" title="" src="https://www.geogebra.org/material/iframe/id/fsupg4wm/width/700/height/800/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false" width="700px" height="700px" style="border:0px;"></iframe>
+
+
+<script id='hello'>
+    console.log('test')
+</script>
+
+<button onclick="console.log('dddd')">Test</button>
+
+---

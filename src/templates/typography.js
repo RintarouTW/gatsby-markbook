@@ -2,7 +2,7 @@ import Typography from 'typography'
 import theme from 'typography-theme-kirkham'
 
 theme.baseFontSize = '18px'
-theme.headerFontFamily = ['Playfair Display']
+theme.headerFontFamily = ['Playfair Display', 'serif']
 theme.bodyFontFamily = ['Fira Sans', 'serif']
 theme.overrideThemeStyles = ({ rhythm }, options) => ({
     'h1': {
@@ -13,7 +13,10 @@ theme.overrideThemeStyles = ({ rhythm }, options) => ({
     },
     'h3': {
       fontSize: "medium"
-    }
+    },
+    'h4': {
+      fontSize: "medium"
+    },
 })
 
 const typography = new Typography(theme)

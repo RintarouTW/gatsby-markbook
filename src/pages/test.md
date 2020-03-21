@@ -168,10 +168,4 @@ GeoGeBra
 <iframe scrolling="no" title="" src="https://www.geogebra.org/material/iframe/id/fsupg4wm/width/700/height/800/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false" width="700px" height="700px" style="border:0px;"></iframe>
 
 
-<script id='hello'>
-    console.log('test')
-</script>
-
-<button onclick="console.log('dddd')">Test</button>
-
 ---

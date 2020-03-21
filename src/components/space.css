@@ -4,9 +4,13 @@ p {
   font-family: 'Fira Sans', 'serif';
 }
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', 'serif';
-  font-weight: 400;
+  font-weight: 420;
+}
+
+h2 {
+  margin-top: 50px;
 }
 
 li {
@@ -21,12 +25,14 @@ b, strong {
   font-size: 100%;
   padding:0px 5px 0px 3px;
   color: #333333;
-  background-color: #cccccc;
+  background-color: #dddddd;
 }
 
-h6.code {
-  color: #222222;
-  background-color: #eeeeee;
+h6 code {
+  color: #333333;
+  background-color: #e7e7e7;
+  margin-left: 5px;
+  margin-right: 5px;
 } 
 
 pre, blockquote {
@@ -34,12 +40,48 @@ pre, blockquote {
   background-color: #444444;
   color: #cccccc;
   padding: 10px;
-}
-
-pre {
+  font-style: normal;
+  font-size: 1.0em;
   border-radius: 10px;
 }
 
 .katex { 
-  font-size: 1em;
+  font-size: 1.1em;
+}
+
+a {
+  color: #7269f3;
+}
+
+table, img, iframe {
+  display:block;
+  margin: 0 auto;
+  max-width: 700px;
+  vertical-align: middle;
+}
+
+img[alt=right] {  
+  float: right;
+}
+.icon, img[alt=left] {
+  display: inline-block;
+  margin: auto;
+}
+img[alt="40"] {
+  width: 40%;
+}
+img[alt="50"] {
+  width: 50%;
+}
+img[alt="60"] {
+  width: 60%;
+}
+img[alt="70"] {
+  width: 70%;
+}
+img[alt="80"] {
+  width: 80%;
+}
+img[alt="90"] {
+  width: 90%;
 }

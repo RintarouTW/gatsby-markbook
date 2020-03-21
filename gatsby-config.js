@@ -18,8 +18,8 @@ module.exports = {
         gfm: true,
         // Plugins configs
         plugins: [
-          `gatsby-remark-mathjax`,
           `gatsby-remark-graphviz`,
+          `gatsby-remark-mathjax`,          
           {
             resolve: `gatsby-remark-vscode`, // gfm must be true to work
             // All options are optional. Defaults shown here.
@@ -30,10 +30,11 @@ module.exports = {
               extensions: [],         // Third-party extensions providing additional themes and languages
               languageAliases: {
                 "!":"javascript",
-                "javascript=!":"javascript",
                 "js=!":"javascript",
-                "js=":"javascript",
                 "js= !":"javascript",
+                "js=":"javascript",
+                "javascript=!":"javascript",
+                "javascript= !":"javascript",
                 "graphviz":""
               },    // Map of custom/unknown language codes to standard/known language codes
               replaceColor: x => x,   // Function allowing replacement of a theme color with another. Useful for replacing hex colors with CSS variables.
@@ -45,8 +46,7 @@ module.exports = {
               }) => '',
               logLevel: 'warn'       // Set to 'info' to debug if something looks wrong
             }
-          },
-          
+          },          
         ],
       },
     },

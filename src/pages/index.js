@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import { graphql } from "gatsby"
 import { css } from "@emotion/core"
 import { rhythm } from "../templates/typography"
@@ -6,9 +6,29 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 
 export default ({ data }) => {
-  const reversed = Array.from(data.allMarkdownRemark.edges).reverse();
+
+  const [keyword, setKeyword] = useState("");
+
+  const changeHandler = (e) => {
+    setKeyword(e.target.value)
+  }
+
+  const source = data.allMarkdownRemark.edges.filter( ({node}) => {
+    return node.fields.slug.toLowerCase().includes(keyword.toLowerCase())
+  })
+  const reversed = source.reverse();
+
   return (
     <Layout>
+      {
+        <input 
+          style={{
+            float : "right"
+          }}
+          defaultValue={keyword} 
+          onChange={changeHandler}>            
+        </input>
+      }
       <div>        
         {reversed.map(({ node }) => (
           <div key={node.id}>

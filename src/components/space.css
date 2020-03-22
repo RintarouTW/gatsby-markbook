@@ -1,24 +1,28 @@
-/* css */
+/* normal paragraph */
 p {
-  white-space: pre-wrap;
+  white-space: pre-wrap; /* line breaks */
   font-family: 'Fira Sans', 'serif';
 }
 
+/* header font & weight */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', 'serif';
-  font-weight: 420;
+  font-weight: 440;
 }
 
-h2 {
+/* only h1 h2 margin top to leave space */
+h1, h2 {
   margin-top: 50px;
 }
 
+/* list itmes */
 li {
   font-family: serif;
   font-weight: 400;
   font-size: 100%;
 }
 
+/* emphasis */
 b, strong {
   font-family: "sans serif";
   font-weight: 500;
@@ -28,6 +32,7 @@ b, strong {
   background-color: #dddddd;
 }
 
+/* tags */
 h6 code {
   color: #333333;
   background-color: #e7e7e7;
@@ -35,6 +40,7 @@ h6 code {
   margin-right: 5px;
 } 
 
+/* code & quote */
 pre, blockquote {
   font-weight: 300;
   background-color: #444444;
@@ -45,28 +51,41 @@ pre, blockquote {
   border-radius: 10px;
 }
 
+/* LaTeX font */
 .katex { 
   font-size: 1.1em;
 }
 
+/* links */
 a {
   color: #7269f3;
 }
 
+/* images, table and embed iframes are default centered */
 table, img, iframe {
   display:block;
   margin: 0 auto;
-  max-width: 700px;
-  vertical-align: middle;
+  max-width: 768px;  
 }
 
+/* manual alignments right of image/icon/text caption */
 img[alt=right] {  
   float: right;
 }
 .icon, img[alt=left] {
   display: inline-block;
+  vertical-align: middle;
   margin: auto;
 }
+.caption {
+  display: block;
+  margin: 0 0 0 0;
+  padding: 0;
+  text-align: center;
+  font-style: italic;
+}
+
+/* manual img resize by alt */
 img[alt="40"] {
   width: 40%;
 }

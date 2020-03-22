@@ -20,15 +20,11 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      {
-        <input 
-          style={{
-            float : "right"
-          }}
-          defaultValue={keyword} 
-          onChange={changeHandler}>            
-        </input>
-      }
+      <input 
+        className={"filterBox"}
+        defaultValue={keyword} 
+        onChange={changeHandler}>            
+      </input>      
       <div>        
         {reversed.map(({ node }) => (
           <div key={node.id}>

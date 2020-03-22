@@ -58,7 +58,8 @@ pre, blockquote {
 
 /* links */
 a {
-  color: #7269f3;
+  /* color: #7269f3; */
+  color : #111;
 }
 
 /* images, table and embed iframes are default centered */
@@ -103,4 +104,29 @@ img[alt="80"] {
 }
 img[alt="90"] {
   width: 90%;
+}
+
+/* Filter Box */
+.filterBox {
+  background-image: url(/icons/search.svg);
+  background-repeat: no-repeat;
+  background-color: rgb(185, 185, 185);
+  text-indent: 1.3em;
+  float: right;
+  outline: none;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  transition: 0.3s all;
+  color:#555;
+  padding: 3px;
+}
+
+input:focus {
+  padding: 10px;
+  border: 2px solid #7269f3;
+  background-color: #dddddd;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: none;
+  color: #111;
 }

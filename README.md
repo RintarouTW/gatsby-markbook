@@ -1,7 +1,7 @@
 # Personal Markdown Book
 
 This is modified from gatsby-default-starter.
-Support some features I required for lots of my markdown files.
+Support some features I required for lots of my markdown key note files.
 
   - LaTeX (with KaTeX & gatsby-remark-mathjax, no server rendering thougth)
   - Graphviz (gatsby-transformer-graphviz)
@@ -9,11 +9,19 @@ Support some features I required for lots of my markdown files.
   - Code Highlight (gatsby-remark-vscode)
   - A simple filter to find the markdown pages by keyword. It's important for ppl like me who got tons of markdown files as notes.
 
+# Screen Shots
+
+Code Highlight
 ![](https://i.imgur.com/BnI2xlh.png)
 
+Graphviz
 ![](https://i.imgur.com/BCJj3pC.png)
 
+LaTeX
 ![](https://i.imgur.com/wGKYKV4.png)
+
+Main Page (My tons of markdown key note files...)
+![](https://i.imgur.com/HiRMact.png)
 
 # No deployment yet, only local so far.
 

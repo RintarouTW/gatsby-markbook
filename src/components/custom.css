@@ -142,3 +142,33 @@ input:focus {
   box-shadow: none;
   color: #111;
 }
+
+info p,
+warning p,
+success p
+{
+  padding: 15px;
+  border-radius: 5px;
+}
+
+info,
+warning
+{
+  padding: 15px;
+  border-radius: 5px;
+}
+
+
+success p {
+  background: rgb(74, 209, 62);
+}
+
+info p
+{
+  background: skyblue;
+}
+
+warning p
+{
+  background: rgb(223, 117, 117);
+}

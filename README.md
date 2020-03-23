@@ -9,6 +9,12 @@ Support some features I required for lots of my markdown files.
   - Code Highlight (gatsby-remark-vscode)
   - A simple filter to find the markdown pages by keyword. It's important for ppl like me who got tons of markdown files as notes.
 
+![](https://i.imgur.com/BnI2xlh.png)
+
+![](https://i.imgur.com/BCJj3pC.png)
+
+![](https://i.imgur.com/wGKYKV4.png)
+
 # No deployment yet, only local so far.
 
 So far, I used it as an important knowledge notebook. But the system is built on gatsby, it would be very easy to be deployed to what you want. I may create a branch for the demo deployment later.

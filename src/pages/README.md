@@ -9,11 +9,18 @@ Support some features I required for lots of my markdown files.
   - Code Highlight (gatsby-remark-vscode)
   - A simple filter to find the markdown pages by keyword. It's important for ppl like me who got tons of markdown files as notes.
 
-# No deployment yet, only local so far.
+Demo Site : https://markbook.netlify.com
 
-So far, I used it as an important knowledge notebook. But the system is built on gatsby, it would be very easy to be deployed to what you want. I may create a branch for the demo deployment later.
+# Netlify Deployment
 
-# Install
+[![Netlify Status](https://api.netlify.com/api/v1/badges/74fac30d-002b-4ea4-b443-3e4b7875f44b/deploy-status)](https://app.netlify.com/sites/markbook/deploys)
+
+1. Fork this repository to your own account.
+2. Goto https://app.netlify.com/ and click on `New Site from Git` button.
+3. Choose the forked respository and deploy it. (All default setting is good.)
+4. Wait for 2min and 32 seconds, your site is live just like my demo site above.
+
+# Local Installation
 
 ```
 npm install
@@ -28,6 +35,6 @@ gatsby serve
 # Test
 
 1. Browse http://localhost:8000/
-2. Click on test (which is **src/pages/test.md**)
-3. Check **src/pages/test.md** for the usage example for LaTeX, Graphviz and code highlight.
-4. Put your .md files to **src/pages/** and they would be presented right away.
+2. Click on test (which is `src/pages/test.md`)
+3. Check `src/pages/test.md` for the usage example for LaTeX, Graphviz and code highlight.
+4. Put your .md files to `src/pages/` and they would be presented right away.

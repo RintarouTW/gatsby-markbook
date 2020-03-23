@@ -120,7 +120,7 @@ img[alt="90"] {
 
 /* Filter Box */
 .filterBox {
-  background-image: url(/icons/search.svg);
+  background-image: url(./search-24px.svg);
   background-repeat: no-repeat;
   background-color: rgb(221, 221, 221);
   text-indent: 1.3em;

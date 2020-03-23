@@ -19,7 +19,8 @@ module.exports = {
         // Plugins configs
         plugins: [
           `gatsby-remark-graphviz`,
-          `gatsby-remark-mathjax`,          
+          `gatsby-remark-mathjax`,
+          'gatsby-remark-containers',
           {
             resolve: `gatsby-remark-vscode`, // gfm must be true to work
             // All options are optional. Defaults shown here.

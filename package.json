@@ -1,6 +1,6 @@
 {
   "name": "gatsby-markbook",
-  "private": true,
+  "private": false,
   "description": "Markbook - Personal Markdown Book",
   "version": "0.1.0",
   "author": "RintarouTW <shuho.chou@gmail.com>",

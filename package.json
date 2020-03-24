@@ -35,7 +35,12 @@
     "prettier": "^1.19.1"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "markbook",
+    "markdown",
+    "LaTeX",
+    "graphviz",
+    "blog"
   ],
   "license": "MIT",
   "scripts": {

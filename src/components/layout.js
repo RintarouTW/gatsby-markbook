@@ -23,6 +23,7 @@ const Layout = ({ children }) => {
         {left: "\\[", right: "\\]", display: true}
       ], 
       trust: true,
+      strict: false,
       macros: {
         "\\eqref":"\\href{#1}{}",   // not support yet
         "\\label":"\\href{#1}{}",   // not support yet

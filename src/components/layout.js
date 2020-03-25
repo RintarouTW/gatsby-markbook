@@ -10,11 +10,10 @@ import PropTypes from "prop-types"
 import Header from "./header"
 import { MDXProvider } from "@mdx-js/react"
 import { GeoGeBra } from "./geogebra"
-import { Style } from "./style"
 // import "./layout.css"
 import "./custom.css"
 
-const shortcodes = { GeoGeBra, Style }
+const shortcodes = { GeoGeBra }
 
 const Layout = ({ children }) => {
 

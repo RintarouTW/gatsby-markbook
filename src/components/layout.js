@@ -8,8 +8,13 @@
 import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import Header from "./header"
+import { MDXProvider } from "@mdx-js/react"
+import { GeoGeBra } from "./geogebra"
+import { Style } from "./style"
 // import "./layout.css"
 import "./custom.css"
+
+const shortcodes = { GeoGeBra, Style }
 
 const Layout = ({ children }) => {
 
@@ -43,7 +48,8 @@ const Layout = ({ children }) => {
   })
 
   return (  
-    <>      
+    <>
+    <MDXProvider components={shortcodes}>
       <Header />
       <div
         style={{
@@ -58,6 +64,7 @@ const Layout = ({ children }) => {
           © {new Date().getFullYear()}
         </footer>
       </div>
+      </MDXProvider>
     </>
   )
 }

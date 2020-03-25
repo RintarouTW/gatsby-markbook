@@ -12,11 +12,15 @@ export default ({ data }) => {
   const changeHandler = (e) => {
     setKeyword(e.target.value)
   }
-
-  const source = data.allMarkdownRemark.edges.filter( ({node}) => {
+  const allMdx = data.allMdx.edges.filter( ({node}) => {
     return node.fields.slug.toLowerCase().includes(keyword.toLowerCase())
   })
-  const reversed = source.reverse();
+
+  const allMarkDown = data.allMarkdownRemark.edges.filter( ({node}) => {
+    return node.fields.slug.toLowerCase().includes(keyword.toLowerCase())
+  })
+
+  const reversed = [ ...allMdx.reverse(), ...allMarkDown.reverse()];
 
   return (
     <Layout>
@@ -48,6 +52,21 @@ export default ({ data }) => {
   )
 }
 
+// export const query = graphql`
+//   query {
+//     allMarkdownRemark {
+//       edges {
+//         node {
+//           fields {
+//             slug
+//           }
+//           id
+//         }
+//       }
+//     }
+//   }
+// `
+
 export const query = graphql`
   query {
     allMarkdownRemark {
@@ -60,5 +79,15 @@ export const query = graphql`
         }
       }
     }
+    allMdx {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          id
+        }
+      }
+    }    
   }
 `

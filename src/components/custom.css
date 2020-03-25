@@ -75,7 +75,7 @@ a {
 }
 
 /* images, table and embed iframes are default centered */
-table, img, iframe {
+table, img, iframe, .geogebra {
   display:block;
   margin: 0 auto;
   max-width: 768px;  

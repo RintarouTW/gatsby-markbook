@@ -14,3 +14,5 @@ export const wrapPageElement = ({ element, ...restProps }, ...args) => {
   return <LatexPage {...restProps} {...args}>{element}</LatexPage>
 };
 */
+
+export const registerServiceWorker = () => true

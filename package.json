@@ -6,10 +6,13 @@
   "author": "RintarouTW <shuho.chou@gmail.com>",
   "dependencies": {
     "@emotion/core": "^10.0.28",
+    "@mdx-js/mdx": "^1.5.7",
+    "@mdx-js/react": "^1.5.7",
     "gatsby": "^2.20.3",
     "gatsby-image": "^2.3.1",
     "gatsby-plugin-emotion": "^4.2.1",
     "gatsby-plugin-manifest": "^2.3.2",
+    "gatsby-plugin-mdx": "^1.1.2",
     "gatsby-plugin-offline": "^3.1.1",
     "gatsby-plugin-react-helmet": "^3.2.1",
     "gatsby-plugin-sharp": "^2.5.2",

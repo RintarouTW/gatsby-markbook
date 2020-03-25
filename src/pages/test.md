@@ -161,11 +161,50 @@ $$
 \end{aligned}
 $$
 
-## iframe embeded
+## Embeded iframe 
 
 GeoGeBra
 
 <iframe scrolling="no" title="" src="https://www.geogebra.org/material/iframe/id/fsupg4wm/width/700/height/800/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false" width="700px" height="700px" style="border:0px;"></iframe>
 
+
+## Embed style
+
+<style>
+  .red {
+    color: #ff0000;
+  }
+</style>
+
+<span class="red">This should be red</span>
+
+```
+<style>
+  .red {
+    color: #ff0000;
+  }
+</style>
+```
+
+## LaTeX vertical spacer Test
+
+
+$$
+\pmatrix{a\\b}\\[3ex]
+\pmatrix{c\\d}
+$$
+
+```
+$$
+\pmatrix{a\\b}\\[3ex]
+\pmatrix{c\\d}
+$$
+```
+
+## LaTeX should be fenced codes instead of emphasis
+
+$$
+\vec{a}_1\vec{a}_2
+$$
 
 ---

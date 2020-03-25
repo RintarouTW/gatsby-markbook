@@ -2,19 +2,19 @@ import React from "react"
 
 export const GeoGeBra = (props) => {
 
-  if (typeof window === 'undefined') {
-    global.window = {}
+  if (typeof window != 'undefined') {
+
+    var ggbApp = new window.GGBApplet({"appName": "graphing", 
+    "width": props.content_width, 
+    "height": props.content_height, 
+    "showToolBar": false, 
+    "showAlgebraInput": false, 
+    "showMenuBar": false,
+    "material_id": props.material_id
+    }, true);
+    ggbApp.inject(props.material_id);
+
   }
-
-  var ggbApp = new window.GGBApplet({"appName": "graphing", 
-                                    "width": props.content_width, 
-                                    "height": props.content_height, 
-                                    "showToolBar": false, 
-                                    "showAlgebraInput": false, 
-                                    "showMenuBar": false,
-                                    "material_id": props.material_id
-                                    }, true);
-  ggbApp.inject(props.material_id);
-
+  
   return <div id={props.material_id} className="geogebra" width={props.width} height={props.height} />
 }

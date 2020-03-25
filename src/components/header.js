@@ -26,12 +26,12 @@ const Header = ({ data }) => (
           {data.site.siteMetadata.title}
         </Link>
       </h1>
-      <h6 style={{ margin : 0 }}>
-        <Link 
+      <h6 style={{ margin: 0 }}>
+        <Link
           to="/About/"
           style={{
             color: "#888888",
-            textDecoration : "none"
+            textDecoration: "none"
           }}
         >
           About
@@ -42,7 +42,7 @@ const Header = ({ data }) => (
 )
 
 export default props => (
-  <StaticQuery query = { graphql`
+  <StaticQuery query={graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -51,7 +51,7 @@ export default props => (
       }
     }
     `}
-    render = { data => <Header data={data} {...props} /> }
+    render={data => <Header data={data} {...props} />}
   />
 )
 

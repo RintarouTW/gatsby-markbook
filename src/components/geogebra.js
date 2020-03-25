@@ -2,6 +2,10 @@ import React from "react"
 
 export const GeoGeBra = (props) => {
 
+  if (typeof window === 'undefined') {
+    global.window = {}
+  }
+
   var ggbApp = new window.GGBApplet({"appName": "graphing", 
                                     "width": props.content_width, 
                                     "height": props.content_height, 

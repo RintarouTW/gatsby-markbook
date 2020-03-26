@@ -14,5 +14,6 @@ export const wrapPageElement = ({ element, ...restProps }, ...args) => {
   return <LatexPage {...restProps} {...args}>{element}</LatexPage>
 };
 */
+require("prismjs/themes/prism-okaidia.css")
 
 export const registerServiceWorker = () => true

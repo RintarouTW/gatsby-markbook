@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     // console.log("Layout updated")
-    window.renderMathInElement(document.body, {
+    const options = {
       delimiters: [
         { left: "$$", right: "$$", display: true },
         { left: "$", right: "$", display: false },
@@ -43,7 +43,22 @@ const Layout = ({ children }) => {
         "\\array": "\\begin{array}#1\\end{array}",
         "\\gather": "\\begin{gathered}#1\\end{gathered}",
       } //, output: "hml" / "mathml"      
+    }
+
+    let inlineMathElements = document.querySelectorAll(".math-inline")
+    let displayMathElements = document.querySelectorAll(".math-display")
+
+    inlineMathElements.forEach(e => {
+      options.displayMode = false
+      window.katex.render(e.textContent, e, options)
     })
+
+    displayMathElements.forEach(e => {
+      options.displayMode = true
+      window.katex.render(e.textContent, e, options)
+    })
+
+    window.renderMathInElement(document.body, options)
   })
 
   return (

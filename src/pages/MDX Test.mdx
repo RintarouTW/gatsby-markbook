@@ -6,7 +6,7 @@
 * Themes with [Typographic.js](https://kyleamathews.github.io/typography.js/)
 * iframe embedding test
 
-## Code Highlight (gatsby-remark-vscode)
+## Code Highlight (`gatsby-remark-prismjs`)
 
 ```javascript
 <html>
@@ -38,7 +38,7 @@ latex2svg({ "latex" : '\$\$\\LaTeX \\frac{1}{3}\$\$'});
 </body>
 </html>
 ```
-## LaTeX
+## $\LaTeX$
 
 $$
 \pmatrix{a\\b}\\[5ex]
@@ -55,7 +55,7 @@ $$
 </div>
 
 
-## Graphviz (gatsby-remark-graphviz)
+## Graphviz (`gatsby-remark-graphviz`)
 
 <center><b>Browser Internals</b></center>
 
@@ -84,8 +84,12 @@ digraph "Browser Internals" {
 
 ## GeoGeBra Component Test
 
+`src/components/geogebra.js`
+
 <GeoGeBra material_id="uex3vrtm" content_width="600" content_height="550" width="600" height="550" />
 
-
+```html
+<GeoGeBra material_id="uex3vrtm" content_width="600" content_height="550" width="600" height="550" />
+```
 
 ---

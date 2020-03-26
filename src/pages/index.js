@@ -4,6 +4,7 @@ import { css } from "@emotion/core"
 import { rhythm } from "../templates/typography"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 export default ({ data }) => {
 
@@ -24,6 +25,7 @@ export default ({ data }) => {
 
   return (
     <Layout>
+      <SEO title="Markbook" />
       <input 
         className={"filterBox"}
         defaultValue={keyword} 

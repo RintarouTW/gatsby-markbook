@@ -11,7 +11,6 @@ import Header from "./header"
 import { MDXProvider } from "@mdx-js/react"
 import { GeoGeBra } from "./geogebra"
 // import "./layout.css"
-import "./custom.css"
 
 const shortcodes = { GeoGeBra }
 
@@ -34,6 +33,7 @@ const Layout = ({ children }) => {
         "\\require": "\\href{#1}{}", // not support yet
         "\\tag": "\\href{#1}{}",     // not support yet
         "\\hfil": "\\space",         // not support yet
+        "\\style": "\\href{#1}{}",   // not support yet
         "\\def": "\\gdef", // def only work in local context, make it global
         "\\cal": "\\mathcal",
         "\\pmatrix": "\\begin{pmatrix}#1\\end{pmatrix}",

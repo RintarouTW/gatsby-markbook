@@ -44,7 +44,8 @@ b, strong {
 }
 
 /* tags */
-h6 code {
+h6 code, :not(pre) > code[class*="language-"] {
+  font-family: 'Playfair Display', 'serif';
   color: #333333;
   background-color: #e7e7e7;
   margin-left: 5px;
@@ -54,7 +55,7 @@ h6 code {
 /* code & quote */
 pre, blockquote {
   font-weight: 300;
-  background-color: #444444;
+  background: #444444;
   color: #cccccc;
   padding: 10px;
   font-style: normal;
@@ -129,7 +130,7 @@ img[alt="90"] {
 
 /* Filter Box */
 .filterBox {
-  background-image: url(../images/search-24px.svg);
+  background-image: url(./images/search-24px.svg);
   background-repeat: no-repeat;
   background-color: rgb(221, 221, 221);
   text-indent: 1.3em;

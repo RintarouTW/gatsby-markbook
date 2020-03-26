@@ -15,5 +15,6 @@ export const wrapPageElement = ({ element, ...restProps }, ...args) => {
 };
 */
 require("prismjs/themes/prism-okaidia.css")
+require("./src/custom.css")
 
 export const registerServiceWorker = () => true

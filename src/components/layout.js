@@ -45,20 +45,31 @@ const Layout = ({ children }) => {
       } //, output: "hml" / "mathml"      
     }
 
-    window.renderMathInElement(document.body, options)
-
     let inlineMathElements = document.querySelectorAll(".math-inline")
     let displayMathElements = document.querySelectorAll(".math-display")
 
-    inlineMathElements.forEach(e => {
-      options.displayMode = false
-      window.katex.render(e.textContent, e, options)
-    })
+    if (!inlineMathElements.length && !displayMathElements.length) {
+      // only render the document which contains no math-inline and math-display elements
+      window.renderMathInElement(document.body, options)
 
-    displayMathElements.forEach(e => {
-      options.displayMode = true
-      window.katex.render(e.textContent, e, options)
-    })
+    } else {
+
+      inlineMathElements.forEach(e => {
+        // if it's rendered, don't render it again.
+        if (!e.firstElementChild || e.firstElementChild.tagName !== "SPAN") {
+          options.displayMode = false
+          window.katex.render(e.textContent, e, options)
+        }
+      })
+
+      displayMathElements.forEach(e => {
+        // if it's rendered, don't render it again.
+        if (!e.firstElementChild || e.firstElementChild.tagName !== "DIV") {
+          options.displayMode = true
+          window.katex.render(e.textContent, e, options)
+        }
+      })
+    }
 
   })
 

@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+/* MathLoader for MathJax */
 // const MathLoader = `
 // <script>
 // MathJax = {

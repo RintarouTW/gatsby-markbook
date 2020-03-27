@@ -11,6 +11,7 @@ import Header from "./header"
 import { MDXProvider } from "@mdx-js/react"
 import { GeoGeBra } from "./geogebra"
 // import "./layout.css"
+// import { Helmet } from "react-helmet"
 
 const shortcodes = { GeoGeBra }
 

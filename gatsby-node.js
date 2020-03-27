@@ -63,7 +63,6 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   result.data.allMarkdownRemark && result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    console.log(">>>>> create .md page")
     createPage({
       path: node.fields.slug,
       component: path.resolve(`./src/templates/blog-post.js`),
@@ -76,7 +75,6 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   result.data.allMdx && result.data.allMdx.edges.forEach(({ node }) => {
-    console.log(">>>>> create .mdx page")
     createPage({
       path: node.fields.slug,
       component: path.resolve(`./src/templates/blog-post.js`),

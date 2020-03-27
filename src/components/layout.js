@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
         { left: "\\[", right: "\\]", display: true }
       ],
       trust: true,
-      strict: false,
+      strict: "ignore",
       macros: {
         "\\eqref": "\\href{#1}{}",   // not support yet
         "\\label": "\\href{#1}{}",   // not support yet
@@ -45,6 +45,8 @@ const Layout = ({ children }) => {
       } //, output: "hml" / "mathml"      
     }
 
+    window.renderMathInElement(document.body, options)
+
     let inlineMathElements = document.querySelectorAll(".math-inline")
     let displayMathElements = document.querySelectorAll(".math-display")
 
@@ -58,7 +60,6 @@ const Layout = ({ children }) => {
       window.katex.render(e.textContent, e, options)
     })
 
-    window.renderMathInElement(document.body, options)
   })
 
   return (

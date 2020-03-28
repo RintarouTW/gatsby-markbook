@@ -1,14 +1,12 @@
 /* normal paragraph */
 p {
   white-space: pre-wrap; /* line breaks */
-  font-family: 'Fira Sans', 'serif';
 }
 
 /* header font & weight */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', 'serif';
+/* h1, h2, h3, h4, h5, h6 {
   font-weight: 440;
-}
+} */
 
 /* only h1 h2 margin top to leave space */
 h1, h2 {
@@ -28,16 +26,13 @@ footer {
 
 /* list itmes */
 li {
-  font-family: serif;
   font-weight: 400;
-  font-size: 100%;
 }
 
 /* emphasis */
 b, strong {
-  font-family: "sans serif";
   font-weight: 500;
-  font-size: 100%;
+  /* font-size: 100%; */
   padding:0px 5px 0px 3px;
   color: #333333;
   background-color: #dddddd;
@@ -45,7 +40,7 @@ b, strong {
 
 /* tags */
 h6 code, :not(pre) > code[class*="language-"] {
-  font-family: 'serif';
+  font-family: monospace;
   font-weight: 400;
   color: #333333;
   background-color: #eaeaea;
@@ -62,7 +57,7 @@ pre, blockquote {
   color: #cccccc;
   padding: 10px;
   font-style: normal;
-  font-size: 1.0em;
+  /* font-size: 1.0em; */
   border-radius: 10px;
   white-space: pre-wrap;
 }
@@ -83,7 +78,10 @@ a {
 table, img, iframe, .geogebra {
   display:block;
   margin: 0 auto;
-  max-width: 768px;  
+  max-width: 768px;
+  max-height: 768px;
+  border: 0px;
+  display: table;
 }
 
 /* manual alignments right of image/icon/text caption */
@@ -210,6 +208,7 @@ warning p
  * 3. Adjust the position of the line numbers
  */
 .gatsby-highlight code[class*="language-"], pre[class*="language-"] {
+  font-family: monospace;
   white-space: pre-wrap;
   background-color: transparent;
   margin: 0;

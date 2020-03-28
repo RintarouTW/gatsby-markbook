@@ -1,23 +1,20 @@
 import Typography from 'typography'
 import theme from 'typography-theme-kirkham'
 
-theme.baseFontSize = '18px'
-theme.headerFontFamily = ['Playfair Display', 'serif']
-theme.bodyFontFamily = ['Fira Sans', 'serif']
-theme.overrideThemeStyles = ({ rhythm }, options) => ({
-    'h1': {
-       fontSize: "x-large"
-    },
-    'h2': {
-      fontSize: "large"
-    },
-    'h3': {
-      fontSize: "medium"
-    },
-    'h4': {
-      fontSize: "medium"
-    },
-})
+theme.scaleRatio = 1.7
+// theme.googleFonts = [
+//   {
+//     name: "Source Code Pro",
+//     styles: []
+//   }, {
+//     name: "Lora",
+//     styles: []
+//   }, {
+//     name: "Domine",
+//     styles: []
+//   }]
+// theme.headerFontFamily = ["Domine", "Lora"]
+// theme.bodyFontFamily = ["Fira Sans", "Source Code Pro Regular", "monospace"]
 
 const typography = new Typography(theme)
 

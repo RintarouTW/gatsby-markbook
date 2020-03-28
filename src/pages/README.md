@@ -13,7 +13,7 @@ Demo Site : https://markbook.netlify.com
 
 # GitHub
 
-<img class="icon" height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg"></img>https://github.com/RintarouTW/gatsby-markbook
+<img class="icon" height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg"></img> https://github.com/RintarouTW/gatsby-markbook
 
 # Netlify Deployment
 
@@ -44,8 +44,8 @@ gatsby serve
 # Test
 
 1. Browse http://localhost:8000/
-2. Click on test (which is `src/pages/test.md`)
-3. Check `src/pages/test.md` for the usage example for LaTeX, Graphviz and code highlight.
+2. Click on test (which is `src/pages/Test.md`)
+3. Check `src/pages/Test.md` for the usage example for LaTeX, Graphviz and code highlight.
 4. Put your .md files to `src/pages/` and they would be presented right away.
 
 

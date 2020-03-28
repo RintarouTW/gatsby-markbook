@@ -1,8 +1,8 @@
-# Test Markdown Page
+# Markdown Test Page
 
 * Code Highlight
 * Graphviz
-* LaTeX
+* $\LaTeX$
 * Themes with [Typographic.js](https://kyleamathews.github.io/typography.js/)
 * iframe embedding test
 
@@ -176,9 +176,9 @@ GeoGeBra
   }
 </style>
 
-<span class="red">This should be red</span>
+<center><span class="red">This should be red</span></center>
 
-```
+```javascript
 <style>
   .red {
     color: #ff0000;
@@ -186,7 +186,7 @@ GeoGeBra
 </style>
 ```
 
-## LaTeX vertical spacer Test
+## $\LaTeX$ vertical spacer Test
 
 
 $$
@@ -194,17 +194,15 @@ $$
 \pmatrix{c\\d}
 $$
 
-```
+```javascript
 $$
 \pmatrix{a\\b}\\[3ex]
 \pmatrix{c\\d}
 $$
 ```
 
-## LaTeX should be fenced codes instead of emphasis
+## $\LaTeX$ should be fenced codes instead of emphasis
 
 $$
 \vec{a}_1\vec{a}_2
 $$
-
----

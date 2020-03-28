@@ -9,16 +9,15 @@ import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import Header from "./header"
 import { MDXProvider } from "@mdx-js/react"
-import { GeoGeBra } from "./geogebra"
+import GeoGeBra from "./geogebra"
 // import "./layout.css"
-// import { Helmet } from "react-helmet"
 
 const shortcodes = { GeoGeBra }
 
 const Layout = ({ children }) => {
 
   useEffect(() => {
-    // console.log("Layout updated")
+
     const options = {
       delimiters: [
         { left: "$$", right: "$$", display: true },
@@ -76,22 +75,22 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <MDXProvider components={shortcodes}>
-        <Header />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0 1.0875rem 1.45rem`,
-          }}
-        >
+      <Header />
+      <div
+        style={{
+          margin: `0 auto`,
+          maxWidth: 960,
+          padding: `0 1.0875rem 1.45rem`,
+        }}
+      >
+        <MDXProvider components={shortcodes}>
           <main>{children}</main>
-          <hr />
-          <footer>
-            © {new Date().getFullYear()}
-          </footer>
-        </div>
-      </MDXProvider>
+        </MDXProvider>
+        <hr />
+        <footer>
+          © {new Date().getFullYear()}
+        </footer>
+      </div>
     </>
   )
 }

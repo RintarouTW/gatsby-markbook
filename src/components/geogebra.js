@@ -18,3 +18,5 @@ export const GeoGeBra = (props) => {
 
   return <div id={props.material_id} className="geogebra" style={{ width: props.width, height: props.height }} />
 }
+
+export default GeoGeBra

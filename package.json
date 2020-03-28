@@ -32,7 +32,6 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
-    "rehype-katex": "^3.0.0",
     "remark-math": "^2.0.1",
     "typescript": "^3.8.3",
     "typography": "^0.16.19",
@@ -58,6 +57,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "prod": "gatsby clean;gatsby build;gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },

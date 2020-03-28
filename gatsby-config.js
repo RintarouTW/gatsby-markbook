@@ -5,6 +5,31 @@ module.exports = {
     author: `RintarouTW`,
   },
   plugins: [
+    `gatsby-plugin-emotion`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Mind Upgrade`,
+        short_name: `Markbook`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `standalone`,
+        icon: `src/images/markbook.png`, // This path is relative to the root of the site.
+        theme_color_in_head: false, // This will avoid adding theme-color meta tag.
+      },
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
 
     {
       resolve: `gatsby-transformer-remark`,
@@ -45,28 +70,6 @@ module.exports = {
       },
     },
 
-    `gatsby-plugin-emotion`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/templates/typography`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages/`,
-      },
-    },
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -204,19 +207,10 @@ module.exports = {
       },
     },
 
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-plugin-typography`,
       options: {
-        name: `Mind Upgrade`,
-        short_name: `Markbook`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `standalone`,
-        icon: `src/images/markbook.png`, // This path is relative to the root of the site.
-        theme_color_in_head: false, // This will avoid adding theme-color meta tag.
+        pathToConfigModule: `src/templates/typography`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

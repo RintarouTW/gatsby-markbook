@@ -16,7 +16,7 @@ export const GeoGeBra = (props) => {
     ggbApp.inject(props.material_id);
   }
 
-  return <div id={props.material_id} className="geogebra" style={{ width: props.width, height: props.height }} />
+  return <div id={props.material_id} className="geogebra" style={{ width: props.width, height: props.height, display: "table" }} />
 }
 
 export default GeoGeBra

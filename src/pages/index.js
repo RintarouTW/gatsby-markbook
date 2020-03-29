@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { css } from "@emotion/core"
 import { rhythm } from "../templates/typography"
@@ -10,36 +10,34 @@ export default ({ data }) => {
 
   const [keyword, setKeyword] = useState("");
 
-  const changeHandler = (e) => {
-    setKeyword(e.target.value)
-  }
-  const allMdx = data.allMdx.edges.filter( ({node}) => {
-    return node.fields.slug.toLowerCase().includes(keyword.toLowerCase())
-  })
+  const changeHandler = (e) => setKeyword(e.target.value)
 
-  const allMarkDown = data.allMarkdownRemark.edges.filter( ({node}) => {
-    return node.fields.slug.toLowerCase().includes(keyword.toLowerCase())
-  })
+  const keywordFilter = ({ node }) => node.fields.slug.toLowerCase().includes(keyword.toLowerCase())
 
-  const reversed = [ ...allMdx.reverse(), ...allMarkDown.reverse()];
+  const allMdx = data.allMdx.edges.filter(keywordFilter)
+
+  const allMarkDown = data.allMarkdownRemark.edges.filter(keywordFilter)
+
+  const reversed = [...allMdx.reverse(), ...allMarkDown.reverse()];
 
   return (
     <Layout>
       <SEO title="Markbook" />
-      <input 
+      <input
         className={"filterBox"}
-        defaultValue={keyword} 
-        onChange={changeHandler}>            
-      </input>      
-      <div>        
+        defaultValue={keyword}
+        onChange={changeHandler}>
+      </input>
+      <div>
         {reversed.map(({ node }) => (
           <div key={node.id}>
             <h3
               css={css`
-                margin-bottom: ${rhythm(1 / 4)};
+                font-size: 95%;
+                margin-bottom: ${rhythm(1.3 / 4)};
               `}
             >
-              <Link to={node.fields.slug}>{node.fields.slug.replace(/\//g,"")}</Link>
+              <Link to={node.fields.slug}>{node.fields.slug.replace(/\//g, "")}</Link>
               <span
                 css={css`
                   color: #bbb;

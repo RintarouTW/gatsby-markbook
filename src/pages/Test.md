@@ -3,10 +3,9 @@
 * Code Highlight
 * Graphviz
 * $\LaTeX$
-* Themes with [Typographic.js](https://kyleamathews.github.io/typography.js/)
 * iframe embedding test
 
-## Code Highlight (gatsby-remark-vscode)
+## Code Highlight (`gatsby-remark-vscode`)
 
 ```javascript
 <html>
@@ -39,7 +38,7 @@ latex2svg({ "latex" : '\$\$\\LaTeX \\frac{1}{3}\$\$'});
 </html>
 ```
 
-## Graphviz (gatsby-remark-graphviz)
+## Graphviz (`gatsby-remark-graphviz`)
 
 <center><b>Browser Internals</b></center>
 
@@ -168,6 +167,28 @@ GeoGeBra
 <iframe scrolling="no" title="" src="https://www.geogebra.org/material/iframe/id/fsupg4wm/width/700/height/800/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false" width="700px" height="700px" style="border:0px;"></iframe>
 
 
+## $\LaTeX$ vertical spacer Test
+
+
+$$
+\pmatrix{a\\b}\\[3ex]
+\pmatrix{c\\d}
+$$
+
+```javascript
+$$
+\pmatrix{a\\b}\\[3ex]
+\pmatrix{c\\d}
+$$
+```
+
+## underscore in $\LaTeX$ should be fenced, not markdown emphasis
+
+$$
+\vec{a}_1\vec{a}_2
+$$
+
+
 ## Embed style
 
 <style>
@@ -185,24 +206,3 @@ GeoGeBra
   }
 </style>
 ```
-
-## $\LaTeX$ vertical spacer Test
-
-
-$$
-\pmatrix{a\\b}\\[3ex]
-\pmatrix{c\\d}
-$$
-
-```javascript
-$$
-\pmatrix{a\\b}\\[3ex]
-\pmatrix{c\\d}
-$$
-```
-
-## $\LaTeX$ should be fenced codes instead of emphasis
-
-$$
-\vec{a}_1\vec{a}_2
-$$

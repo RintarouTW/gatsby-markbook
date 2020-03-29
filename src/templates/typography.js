@@ -1,7 +1,7 @@
 import Typography from 'typography'
 import theme from 'typography-theme-kirkham'
 
-theme.scaleRatio = 1.7
+theme.scaleRatio = 1.2
 // theme.googleFonts = [
 //   {
 //     name: "Source Code Pro",

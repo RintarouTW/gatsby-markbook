@@ -85,6 +85,10 @@ table, img, iframe, .geogebra {
   display: table;
 }
 
+.geogebra {
+  margin-bottom: 10px;
+}
+
 /* manual alignments right of image/icon/text caption */
 img[alt=right] {  
   float: right;

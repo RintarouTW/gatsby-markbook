@@ -46,7 +46,8 @@ module.exports = {
         plugins: [
           `gatsby-remark-graphviz`,
           `gatsby-remark-mathjax`,
-          'gatsby-remark-containers',
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-containers`,
           {
             resolve: `gatsby-remark-vscode`, // gfm must be true to work
             // All options are optional. Defaults shown here.
@@ -88,6 +89,7 @@ module.exports = {
         remarkPlugins: [require(`remark-math`)],
         gatsbyRemarkPlugins: [
           `gatsby-remark-graphviz`,
+          `gatsby-remark-autolink-headers`,
           // for Server Side Rendering.
           // {
           //   resolve: `gatsby-remark-katex`,

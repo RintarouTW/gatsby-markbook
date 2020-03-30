@@ -56,19 +56,15 @@ const Layout = ({ children, path }) => {
     } else {
 
       inlineMathElements.forEach(e => {
-        // if it's rendered, don't render it again.
-        if (!e.firstElementChild || e.firstElementChild.tagName !== "SPAN") {
-          options.displayMode = false
-          window.katex.render(e.textContent, e, options)
-        }
+        options.displayMode = false
+        window.katex.render(e.textContent, e, options)
+        e.classList.toggle("math-inline") // prevent begin rendered again
       })
 
       displayMathElements.forEach(e => {
-        // if it's rendered, don't render it again.
-        if (!e.firstElementChild || e.firstElementChild.tagName !== "DIV") {
-          options.displayMode = true
-          window.katex.render(e.textContent, e, options)
-        }
+        options.displayMode = true
+        window.katex.render(e.textContent, e, options)
+        e.classList.toggle("math-display") // prevent begin rendered again
       })
     }
 

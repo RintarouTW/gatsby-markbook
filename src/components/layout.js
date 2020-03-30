@@ -11,10 +11,11 @@ import Header from "./header"
 import { MDXProvider } from "@mdx-js/react"
 import GeoGeBra from "./geogebra"
 // import "./layout.css"
+import SEO from "../components/seo"
 
 const shortcodes = { GeoGeBra }
 
-const Layout = ({ children }) => {
+const Layout = ({ children, path }) => {
 
   useEffect(() => {
 
@@ -73,8 +74,11 @@ const Layout = ({ children }) => {
 
   })
 
+  const title = path ? decodeURI(path.replace(/\//g, "")) : ""
+
   return (
     <>
+      <SEO title={title} />
       <Header />
       <div
         style={{

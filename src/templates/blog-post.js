@@ -4,57 +4,48 @@ import Layout from "../components/layout"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import SEO from "../components/seo"
 
-export default ({ data }) => {
+// export default ({ data, pageContext, path, slug }) => {
+export default (props) => {
 
-  if (data.markdownRemark) {
+  const { data, pageContext } = props
 
-    const post = data.markdownRemark
-    const slug = post.fields.slug.replace(/\//g, "")
-    const seo = post.frontmatter.title ? post.frontmatter.title : slug
+  let post
 
+  post = data.markdownRemark ? data.markdownRemark : data.mdx
+
+  const slug = pageContext.slug.replace(/\//g, "")
+  const title = post.frontmatter.title ? post.frontmatter.title : slug
+
+  if (data.markdownRemark)
     return (
       <Layout>
-        <SEO title={seo} />
+        <SEO title={title} />
         <div>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </div>
       </Layout>
     )
-
-  } else if (data.mdx) {
-
-    const post = data.mdx
-    const slug = post.fields.slug.replace(/\//g, "")
-    const seo = post.frontmatter.title ? post.frontmatter.title : slug
-
+  else
     return (
       <Layout>
-        <SEO title={seo} />
+        <SEO title={title} />
         <div>
           <MDXRenderer>{post.body}</MDXRenderer>
         </div>
       </Layout>
     )
-  }
-
 }
 
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
-      fields {
-        slug
-      }
       frontmatter {
         title
       }
     }
     mdx(fields: { slug: { eq: $slug } }) {
       body
-      fields {
-        slug
-      }
       frontmatter {
         title
       }

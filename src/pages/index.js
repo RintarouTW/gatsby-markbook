@@ -29,24 +29,27 @@ export default ({ data }) => {
         onChange={changeHandler}>
       </input>
       <div>
-        {reversed.map(({ node }) => (
-          <div key={node.id}>
-            <h3
-              css={css`
+        {reversed.map(({ node }) => {
+          const title = (node.frontmatter && node.frontmatter.title) ? node.frontmatter.title : node.fields.slug.replace(/\//g, "")
+          return (
+            <div key={node.id}>
+              <h3
+                css={css`
                 font-size: 95%;
                 margin-bottom: ${rhythm(1.3 / 4)};
               `}
-            >
-              <Link to={node.fields.slug}>{node.fields.slug.replace(/\//g, "")}</Link>
-              <span
-                css={css`
+              >
+                <Link to={node.fields.slug}>{title}</Link>
+                <span
+                  css={css`
                   color: #bbb;
                 `}
-              >
-              </span>
-            </h3>
-          </div>
-        ))}
+                >
+                </span>
+              </h3>
+            </div>
+          )
+        })}
       </div>
     </Layout>
   )
@@ -76,6 +79,9 @@ export const query = graphql`
             slug
           }
           id
+          frontmatter {
+            title
+          }
         }
       }
     }
@@ -86,6 +92,9 @@ export const query = graphql`
             slug
           }
           id
+          frontmatter {
+            title
+          }
         }
       }
     }    

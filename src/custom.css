@@ -1,3 +1,12 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 85vh;
+}
+.content {
+  flex-grow: 1;
+}
+
 /* normal paragraph */
 p {
   white-space: pre-wrap; /* line breaks */

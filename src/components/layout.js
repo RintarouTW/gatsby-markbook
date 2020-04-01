@@ -43,7 +43,7 @@ const Layout = ({ children, path }) => {
         "\\eqalign": "\\begin{aligned}#1\\end{aligned}",
         "\\array": "\\begin{array}#1\\end{array}",
         "\\gather": "\\begin{gathered}#1\\end{gathered}",
-      } //, output: "hml" / "mathml"      
+      } //, output: "hml" / "mathml"
     }
 
     let inlineMathElements = document.querySelectorAll(".math-inline")
@@ -77,6 +77,7 @@ const Layout = ({ children, path }) => {
       <SEO title={title} />
       <Header />
       <div
+        className="container"
         style={{
           margin: `0 auto`,
           maxWidth: 960,
@@ -84,7 +85,7 @@ const Layout = ({ children, path }) => {
         }}
       >
         <MDXProvider components={shortcodes}>
-          <main>{children}</main>
+          <main className="content">{children}</main>
         </MDXProvider>
         <hr />
         <footer>

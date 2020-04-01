@@ -76,17 +76,17 @@ a {
 }
 
 /* images, table and embed iframes are default centered */
-table, img, iframe, .geogebra {
-  display:block;
-  margin: 0 auto;
+table, img, iframe {
   max-width: 768px;
-  max-height: 768px;
+  display: block;
+  margin: 0 auto 20px auto;
   border: 0px;
-  display: table;
 }
 
 .geogebra {
-  margin-bottom: 10px;
+  display: block;
+  margin: 0 auto 20px auto;
+  border: 0px;
 }
 
 /* <kbd> */

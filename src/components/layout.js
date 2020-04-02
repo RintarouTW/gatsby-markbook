@@ -19,6 +19,14 @@ const Layout = ({ children, path }) => {
 
   useEffect(() => {
 
+    let main_content = document.querySelectorAll(".katex_is_not_rendered")
+
+    // prevent double rendering
+    if (main_content[0])
+      main_content[0].classList.toggle("katex_is_not_rendered")
+    else
+      return;
+
     const options = {
       delimiters: [
         { left: "$$", right: "$$", display: true },
@@ -85,7 +93,7 @@ const Layout = ({ children, path }) => {
         }}
       >
         <MDXProvider components={shortcodes}>
-          <main className="content">{children}</main>
+          <main className="content katex_is_not_rendered">{children}</main>
         </MDXProvider>
         <hr />
         <footer>

@@ -66,13 +66,11 @@ const Layout = ({ children, path }) => {
       inlineMathElements.forEach(e => {
         options.displayMode = false
         window.katex.render(e.textContent, e, options)
-        e.classList.toggle("math-inline") // prevent begin rendered again
       })
 
       displayMathElements.forEach(e => {
         options.displayMode = true
         window.katex.render(e.textContent, e, options)
-        e.classList.toggle("math-display") // prevent begin rendered again
       })
     }
 

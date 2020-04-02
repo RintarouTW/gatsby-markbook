@@ -18,7 +18,7 @@ p {
 } */
 
 /* only h1 h2 margin top to leave space */
-h1, h2 {
+h1:not(:first-of-type), h2 {
   margin-top: 50px;
 }
 

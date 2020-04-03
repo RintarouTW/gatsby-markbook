@@ -1,4 +1,4 @@
-# Personal Markdown Book
+# Personal Markdown Book <img class="icon" width="32" height="32" src="https://i.imgur.com/KHOWAta.png"/>
 
 This is modified from `gatsby-default-starter`.
 Support some features I required for lots of my markdown key note files.
@@ -7,6 +7,7 @@ Support some features I required for lots of my markdown key note files.
   - Graphviz (via `gatsby-transformer-graphviz`)
   - Using `Typography.js` Themes (https://kyleamathews.github.io/typography.js/)
   - Code Highlight (`.md` via `gatsby-remark-vscode`,  `.mdx` via `primjs`)
+  - GeoGeBra Component to load and show GeoGeBra graphic much faster than iframe.
   - A simple filter to find the markdown pages by keyword. It's important for ppl like me who got tons of markdown files as notes.
 
 Demo Site : *https://markbook.netlify.com*

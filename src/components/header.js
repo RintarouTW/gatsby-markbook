@@ -42,6 +42,10 @@ const Header = ({ data }) => (
         </Link>
       </h6>
     </div>
+    <div style={{
+      backgroundColor: "#999",
+      padding: "2px"
+    }}></div>
   </header>
 )
 

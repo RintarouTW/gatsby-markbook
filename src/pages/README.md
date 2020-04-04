@@ -1,4 +1,8 @@
-# Personal Markdown Book <img class="icon" width="32" height="32" src="https://i.imgur.com/KHOWAta.png"/>
+# Markdown Book
+
+<p align="center">
+<img class="icon" width="64" height="64" src="https://rintaroutw.github.io/gatsby-markbook/markbook.svg"/>
+</p>
 
 This is modified from `gatsby-default-starter`.
 Support some features I required for lots of my markdown key note files.

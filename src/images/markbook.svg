@@ -1,4 +1,6 @@
-<svg class="bi bi-bookmarks" width="512px" height="512px" viewBox="0 -0.1 16 16" fill="#09f" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M7 13l5 3V4a2 2 0 00-2-2H4a2 2 0 00-2 2v12l5-3zm-4 1.234l4-2.4 4 2.4V4a1 1 0 00-1-1H4a1 1 0 00-1 1v10.234z" clip-rule="evenodd"/>
-  <path d="M14 14l-1-.6V2a1 1 0 00-1-1H4.268A2 2 0 016 0h6a2 2 0 012 2v12z"/>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="14.9108" width="93.4306" height="497.089" fill="#4894FD"/>
+<rect x="418.569" y="14.9108" width="93.4306" height="497.089" fill="#BDBDBD"/>
+<rect width="96.5453" height="469.52" transform="matrix(0.889316 -0.457294 0.337144 0.941453 62.793 44.1495)" fill="#62E467"/>
+<rect width="96.7439" height="484.434" transform="matrix(0.882175 0.470923 -0.348466 0.937322 348.686 6.05884)" fill="#E66D6D"/>
 </svg>

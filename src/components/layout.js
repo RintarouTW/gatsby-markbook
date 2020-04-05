@@ -19,14 +19,6 @@ const Layout = ({ children, path }) => {
 
   useEffect(() => {
 
-    let main_content = document.querySelectorAll(".katex_is_not_rendered")
-
-    // prevent double rendering
-    if (main_content[0])
-      main_content[0].classList.toggle("katex_is_not_rendered")
-    else
-      return;
-
     const options = {
       delimiters: [
         { left: "$$", right: "$$", display: true },
@@ -58,6 +50,15 @@ const Layout = ({ children, path }) => {
     let displayMathElements = document.querySelectorAll(".math-display")
 
     if (!inlineMathElements.length && !displayMathElements.length) {
+
+      let main_content = document.querySelectorAll(".katex_is_not_rendered")
+
+      // prevent double rendering
+      if (main_content[0])
+        main_content[0].classList.toggle("katex_is_not_rendered")
+      else
+        return;
+
       // only render the document which contains no math-inline and math-display elements
       window.renderMathInElement(document.body, options)
 
@@ -66,11 +67,13 @@ const Layout = ({ children, path }) => {
       inlineMathElements.forEach(e => {
         options.displayMode = false
         window.katex.render(e.textContent, e, options)
+        e.classList.toggle("math-inline")
       })
 
       displayMathElements.forEach(e => {
         options.displayMode = true
         window.katex.render(e.textContent, e, options)
+        e.classList.toggle("math-display")
       })
     }
 

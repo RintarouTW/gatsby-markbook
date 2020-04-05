@@ -103,12 +103,37 @@ const Layout = ({ children, path }) => {
             style={{ paddingLeft: `3px` }}
             dangerouslySetInnerHTML={{
               __html: String.raw`<svg width="1em" height="1em" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect y="14.9108" width="93.4306" height="497.089" fill="#4894FD"/>
-              <rect x="418.569" y="14.9108" width="93.4306" height="497.089" fill="#BDBDBD"/>
-              <rect width="96.5453" height="469.52" transform="matrix(0.889316 -0.457294 0.337144 0.941453 62.793 44.1495)" fill="#62E467"/>
-              <rect width="96.7439" height="484.434" transform="matrix(0.882175 0.470923 -0.348466 0.937322 348.686 6.05884)" fill="#E66D6D"/>
-              </svg>
-              `}} />
+              <rect y="14.9109" width="93.4306" height="497.089" fill="url(#paint0_linear)"/>
+              <rect x="418.569" y="14.9109" width="93.4306" height="497.089" fill="url(#paint1_linear)"/>
+              <rect width="96.5454" height="469.52" transform="matrix(0.889316 -0.457294 0.337143 0.941453 62.793 44.1497)" fill="url(#paint2_linear)"/>
+              <rect width="96.7439" height="484.434" transform="matrix(0.882174 0.470923 -0.348466 0.937322 348.686 6.05908)" fill="url(#paint3_linear)"/>
+              <defs>
+              <linearGradient id="paint0_linear" x1="-2.10751e-06" y1="278.5" x2="92" y2="280" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#366FBD"/>
+              <stop offset="0.109375" stop-color="#6BA9FF"/>
+              <stop offset="0.875" stop-color="#3489FF"/>
+              <stop offset="1" stop-color="#1D4274"/>
+              </linearGradient>
+              <linearGradient id="paint1_linear" x1="418.569" y1="278.5" x2="511.569" y2="278.5" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#CACACA"/>
+              <stop offset="0.197917" stop-color="#919191"/>
+              <stop offset="0.822917" stop-color="#AAAAAA"/>
+              <stop offset="0.984375" stop-color="#101010"/>
+              </linearGradient>
+              <linearGradient id="paint2_linear" x1="-0.368776" y1="241.841" x2="94.0169" y2="241.375" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#1C7E20"/>
+              <stop offset="0.125" stop-color="#60E265"/>
+              <stop offset="0.911458" stop-color="#32D138"/>
+              <stop offset="1" stop-color="#1F7B23"/>
+              </linearGradient>
+              <linearGradient id="paint3_linear" x1="-2.9588e-07" y1="256.879" x2="91.6873" y2="258.425" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#964343"/>
+              <stop offset="0.125" stop-color="#FF7B7B"/>
+              <stop offset="0.875" stop-color="#A74949"/>
+              <stop offset="1" stop-color="#632E2E"/>
+              </linearGradient>
+              </defs>
+              </svg>`}} />
         </footer>
       </div>
     </>

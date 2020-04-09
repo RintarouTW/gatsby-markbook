@@ -81,6 +81,7 @@ export const query = graphql`
           id
           frontmatter {
             title
+            path
           }
         }
       }
@@ -94,6 +95,7 @@ export const query = graphql`
           id
           frontmatter {
             title
+            path
           }
         }
       }

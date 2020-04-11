@@ -1,3 +1,8 @@
+---
+title: "README"
+path: "README"
+---
+
 # Markdown Book
 
 <p align="center">

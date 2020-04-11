@@ -1,3 +1,8 @@
+---
+title: "Test"
+path: "Test"
+---
+
 # Markdown Test Page
 
 * Code Highlight
@@ -109,7 +114,7 @@ $\begin{aligned}
 \end{aligned}$
 
 $若\ v,k\ 固定，則\ (\vk\cdot\vv)\ \vk\ 與\ \vk\times\vv 也是固定的，只需要\ \cos{\theta}\ 與\ \sin{\theta}\ 代入即可很快得到答案。$
- 
+
 ## 矩陣型式 (Matrix Notation)
 
 寫成矩陣形式，目標是將 $\vec{v}$ 從之前的結果中提出來。
@@ -160,15 +165,13 @@ $$
 \end{aligned}
 $$
 
-## Embeded iframe 
+## Embeded iframe
 
 GeoGeBra
 
 <iframe scrolling="no" title="" src="https://www.geogebra.org/material/iframe/id/fsupg4wm/width/700/height/800/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false" width="700px" height="700px" style="border:0px;"></iframe>
 
-
 ## $\LaTeX$ vertical spacer Test
-
 
 $$
 \pmatrix{a\\b}\\[3ex]
@@ -187,7 +190,6 @@ $$
 $$
 \vec{a}_1\vec{a}_2
 $$
-
 
 ## Embed style
 

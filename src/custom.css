@@ -167,12 +167,13 @@ img[alt="90"] {
 .filterBox {
   background-image: url(./images/search-24px.svg);
   background-repeat: no-repeat;
-  background-color: rgb(221, 221, 221);
-  text-indent: 1.3em;
+  background-color: #ffffff;
+  background-position: 10px center;
+  text-indent: 1.5em;
   float: right;
   outline: none;
   border: 1px solid #cccccc;
-  border-radius: 5px;
+  border-radius: 35px;
   transition: 0.2s all;
   color:#555;
   padding: 3px;
@@ -181,9 +182,7 @@ img[alt="90"] {
 input:focus {
   padding: 10px;
   border: 1px solid #cccccc;
-  background-color: #ffffff;
   outline: none;
-  border-radius: 5px;
   box-shadow: none;
   color: #111;
 }
